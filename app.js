@@ -11,9 +11,9 @@ const app = express();
 //     res.sendFile(require('path')
 //         .resolve(__dirname, 'client', 'build', 'index.html'));
 // })
-// app.get('/', (req,res)=>{
-//     res.send("hello")
-// })
+app.get('/', (req,res)=>{
+    res.send("hello")
+})
 
 
 const server = http.createServer(app);
