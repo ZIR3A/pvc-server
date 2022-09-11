@@ -12,7 +12,7 @@ const app = express();
 //         .resolve(__dirname, 'client', 'build', 'index.html'));
 // })
 app.get('/', (req,res)=>{
-    res.send("hello rakesh")
+    res.send("hello World")
 })
 
 
@@ -42,7 +42,9 @@ io.on("connection", (socket) => {
     socket.broadcast.emit('candidate', data)
   })
   socket.on("disconnect", () => {
-    console.log("Client disconnected");
+    socket.disconnect();
+    // socket.close()
+    // console.log("Client disconnected");
   });
 });
 
