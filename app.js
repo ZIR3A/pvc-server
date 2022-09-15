@@ -41,11 +41,11 @@ io.on("connection", (socket) => {
   socket.on('candidate', data => {
     socket.broadcast.emit('candidate', data)
   })
-  socket.on("disconnect", () => {
-    socket.disconnect();
-    // socket.close()
-    // console.log("Client disconnected");
-  });
+  // socket.on("disconnect", () => {
+  //   socket.disconnect();
+  //   // socket.close()
+  //   // console.log("Client disconnected");
+  // });
 });
 
 server.listen(port, () => console.log(`Listening on port ${port}`));
